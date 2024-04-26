@@ -1,0 +1,176 @@
+body,
+html {
+  font-family: Arial, sans-serif;
+  background-color: #1c1c1c; /* Dark background */
+  color: #fff; /* Light text */
+}
+
+.container {
+  height: 90vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.toast-container {
+  position: fixed;
+  bottom: 20px;
+  z-index: 1000;
+}
+
+.toast-success {
+  background-color: #4caf50; /* Green for success */
+}
+
+.toast-error {
+  background-color: #f44336; /* Red for errors */
+}
+
+.toast {
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+  transform: translateY(-20px);
+  display: none;
+}
+
+.file-label {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.cancelBtn {
+  text-decoration: none;
+  background: none;
+  color: #949292;
+  cursor: pointer;
+  border: 1px solid #9c9a9a;
+  padding: 5px 10px;
+  margin-top: 5px;
+  border-radius: 30px;
+}
+.cancelBtn:hover {
+  color: #ccc;
+}
+
+.button {
+  margin-top: 20px;
+  width: 150px;
+  height: 150px;
+  font-size: 16px;
+  font-weight: 900;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50%; /* Circular button */
+  background-color: #333; /* Darker than body for contrast */
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Subtle shadow */
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.disconnect-btn {
+  color: #f00;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #555; /* Lighter on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+  transform: scale(1.1); /* Slightly larger on hover */
+}
+
+.button:active {
+  background-color: #777; /* Even lighter on active */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hidden {
+  display: none; /* Initially hide the connect button */
+}
+.disabled {
+  pointer-events: none;
+  color: #333;
+}
+
+input[type="file"] {
+  display: none; /* Hide the actual file input */
+}
+
+/* start loading */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* High z-index to ensure it covers other content */
+}
+
+.loading-dots {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  background-color: #c2bdbd;
+  border-radius: 50%;
+  animation: growShrink 1.2s infinite ease-in-out;
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes growShrink {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+/* end loading */
+
+header {
+  position: absolute;
+  top: 10px;
+}
+
+header a {
+  text-decoration: underline;
+  color: rgb(176, 175, 175);
+  transition: all ease-in-out 0.2s;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+header a:hover {
+  color: #ccc;
+}

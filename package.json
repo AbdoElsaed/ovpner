@@ -1,0 +1,40 @@
+{
+  "name": "ovpner",
+  "version": "1.0.0",
+  "description": "A simple openvpn3 client",
+  "main": "src/main.js",
+  "homepage": "https://asaed.vercel.app/",
+  "scripts": {
+    "start": "electron .",
+    "dev": "nodemon --watch . --exec electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.asaed.ovpner",
+    "productName": "ovpner",
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "icon": "src/icons/",
+      "category": "Utility",
+      "maintainer": "Abdulrhman Elsaed <abdoelsaed114@gmail.com>"
+    },
+    "directories": {
+      "output": "build/"
+    }
+  },
+  "keywords": [],
+  "author": {
+    "name": "Abdulrhman Al-Saed",
+    "email": "abdoelsaed114@gmail.com",
+    "url": "https://asaed.vercel.app/"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^30.0.1",
+    "electron-builder": "^24.13.3",
+    "nodemon": "^3.1.0"
+  }
+}

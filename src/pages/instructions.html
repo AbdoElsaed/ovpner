@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instructions</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <link rel="stylesheet" href="./styles/instructions.css" />
+  </head>
+  <body>
+    <a href="./index.html" class="back-btn">back</a>
+    <div>
+      <ul>
+        <li>
+          Ensure openvpn3 is installed correctly on your operating system.
+        </li>
+        <li>
+          Create <span class="highlight">credentials.txt</span> file alongside
+          your .ovpn file, then write your username and password in the
+          following format
+          <pre><span>username</span><span>password</span></pre>
+        </li>
+        <li>
+          Pass your credentials to your .ovpn file as shown below
+          <pre><span>auth-user-pass credentials.txt</span></pre>
+        </li>
+        <li>Then, select a .ovpn file from the app.</li>
+      </ul>
+    </div>
+  </body>
+</html>

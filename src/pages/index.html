@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>ovpner</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./instructions.html">instructions</a>
+    </header>
+    <div class="container">
+      <input type="file" id="fileInput" accept=".ovpn" hidden />
+      <label for="fileInput" id="fileLabel" class="file-label"
+        >Select OpenVPN File</label
+      >
+
+      <span id="selectedFile" class="hidden"></span>
+      <button id="cancelBtn" class="hidden cancelBtn">cancel</button>
+
+      <button id="connectBtn" class="button">Connect</button>
+      <button id="disconnectBtn" class="button hidden disconnect-btn">
+        Disconnect
+      </button>
+
+      <div class="overlay">
+        <div id="loader" class="loading-dots">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+
+      <div id="toastContainer" class="toast-container"></div>
+    </div>
+
+    <script src="../scripts/utils.js"></script>
+    <script src="../scripts/renderer.js"></script>
+  </body>
+</html>

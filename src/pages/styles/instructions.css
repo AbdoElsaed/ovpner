@@ -1,0 +1,45 @@
+body,
+html {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: #1c1c1c; /* Dark background */
+  color: #fff; /* Light text */
+}
+
+.back-btn {
+  text-decoration: underline;
+  color: #ccc9c9;
+}
+
+pre {
+  overflow-x: auto;
+  overflow-y: auto;
+  background: black;
+  color: LawnGreen;
+  padding: 10px 16px;
+  border-radius: 2px;
+  border-top: 4px solid #00aeef;
+  -moz-box-shadow: inset 0 0 10px #000;
+  box-shadow: inset 0 0 10px #000;
+}
+pre span {
+  counter-increment: line;
+  display: block;
+  line-height: 1.5rem;
+}
+pre span:before {
+  content: counter(line);
+  display: inline-block;
+  border-right: 1px solid #ddd;
+  padding: 0 0.5em;
+  margin-right: 0.5em;
+  color: #888;
+}
+
+li {
+  margin-top: 5px;
+}
+.highlight {
+  background-color: rgb(233, 233, 152);
+  color: #000;
+  font-weight: bolder;
+}
