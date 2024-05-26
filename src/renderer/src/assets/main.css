@@ -1,0 +1,123 @@
+@import './base.css';
+
+body {
+  background-image: url('./wavy-lines.svg');
+  background-size: cover;
+  user-select: none;
+}
+
+code {
+  font-weight: 600;
+  padding: 3px 5px;
+  border-radius: 2px;
+  background-color: var(--color-background-mute);
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    SF Mono,
+    Menlo,
+    Consolas,
+    Liberation Mono,
+    monospace;
+  font-size: 85%;
+}
+
+.vpn-app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.mainButton {
+  margin-top: 20px;
+  width: 150px;
+  height: 150px;
+  font-size: 16px;
+  font-weight: 900;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50%; /* Circular button */
+  background-color: #272525; /* Darker than body for contrast */
+  color: white;
+  box-shadow: 0 4px 8px rgba(59, 57, 57, 0.6); /* Subtle shadow */
+  cursor: pointer;
+  outline: none;
+  transition: all ease-in-out 0.2s;
+  will-change: filter;
+  transition: filter 300ms;
+  filter: drop-shadow(0 0 1em #253152aa);
+}
+.mainButton:hover {
+  filter: drop-shadow(0 0 1.2em #6988e6aa);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 2;
+}
+
+.loading-dots {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  background-color: #c2bdbd;
+  border-radius: 50%;
+  animation: growShrink 1.2s infinite ease-in-out;
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes growShrink {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+.removeBtn {
+  background: none;
+  color: #eee;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.disconnectBtn {
+  color: red;
+}
+#fileLabel {
+  text-decoration: underline;
+  cursor: pointer;
+}
